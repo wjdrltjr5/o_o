@@ -1,0 +1,25 @@
+@charset "utf-8";
+/*
+
+*/
+h1 {
+	border: 1px solid red;
+}
+h2 {
+	border: 1px solid green;
+}
+h3 {
+	border: 1px solid blue;
+}
+div h1 {
+	border: 1px solid gray;
+}
+li:nth-of-type(1) {
+	border: 1px solid greenyellow;
+}
+li:nth-of-type(2) {
+	border: 1px solid blueviolet;
+}
+li:nth-of-type(3) {
+	border: 1px solid yellow;
+}
