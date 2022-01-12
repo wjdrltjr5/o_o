@@ -1,2 +1,3 @@
 # o_o
-uiux 공부
+
+HTML,CSS,JS
