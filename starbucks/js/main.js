@@ -70,6 +70,17 @@ new Swiper(".promotion .swiper", {
 	},
 });
 
+new Swiper(".awards .swiper", {
+	autoplay: true,
+	loop: true,
+	spaceBetween: 30,
+	slidesPerView: 5,
+	navigation: {
+		prevEl: ".awards .swiper-prev",
+		nextEl: ".awards .swiper-next",
+	},
+});
+
 const promotionEl = document.querySelector(".promotion");
 const promotionToggleBtn = document.querySelector(".toggle-promotion");
 let isHidePromotion = false;
@@ -102,10 +113,10 @@ floatingObject(".floating3", 1.5, 20);
 
 const spyEls = document.querySelectorAll("section.scroll-spy");
 spyEls.forEach(function (spyEl) {
-	new ScrollMagin.Scene({
+	new ScrollMagic.Scene({
 		triggerElement: spyEl, // 보여짐 여부를 감시할 요소를 지정
 		tirggerHook: 0.8,
 	})
-		.setClassToggle()
-		.addTo();
+		.setClassToggle(spyEl, "show")
+		.addTo(new ScrollMagic.Controller());
 });
